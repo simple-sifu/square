@@ -1,17 +1,19 @@
 import React from 'react';
+import Square from './Square';
 
 class Game extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-        xIsNext: true,
-        square: X,
+        value: 'X'
     };
+    this.handleClick = this.handleClick.bind(this);
 }
 
-handleClick(i){
+handleClick() {
+  console.log("handleClick");
   this.setState({
-      square: this.state.xIsNext ? 'X' : 'O'
+      value: this.state.value === 'X' ? 'O' : 'X'
   });
 }
 
@@ -21,7 +23,7 @@ handleClick(i){
     return (
       <div className="game">
           <Square 
-            onClick={(i) => this.handleClick(i)}
+            onClick={this.handleClick}
           />
       </div>
     );
