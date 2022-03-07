@@ -5,7 +5,7 @@ class Game extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-        value: 'X'
+        toggle: true
     };
     this.handleClick = this.handleClick.bind(this);
 }
@@ -13,7 +13,7 @@ class Game extends React.Component {
 handleClick() {
   console.log("handleClick");
   this.setState({
-      value: this.state.value === 'X' ? 'O' : 'X'
+      toggle: !this.state.toggle
   });
 }
 
@@ -24,6 +24,7 @@ handleClick() {
       <div className="game">
           <Square 
             onClick={this.handleClick}
+            toggle={this.state.toggle}
           />
       </div>
     );
