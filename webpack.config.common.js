@@ -1,22 +1,22 @@
-const path = require('path')
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const path = require("path");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: './src/index.js',
+  entry: "./src/tictactoe0/index.js",
   output: {
-    filename: 'index.bundle.js',
-    path: path.join(__dirname, '/dist')
+    filename: "index.bundle.js",
+    path: path.join(__dirname, "/dist"),
   },
   resolve: {
-    extensions: [ '.js', '.jsx']
+    extensions: [".js", ".jsx"],
   },
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      filename: '[name].html',
+      filename: "[name].html",
       inject: true,
-      template: path.resolve(__dirname, 'src', 'index.html'),
+      template: path.resolve(__dirname, "src", "index.html"),
     }),
   ],
   module: {
@@ -25,9 +25,9 @@ module.exports = {
         test: /\.(js|jsx)$/,
         exclude: /[\\/]node_modules[\\/]/,
         use: {
-          loader: 'babel-loader',
+          loader: "babel-loader",
         },
       },
-    ]
-  }
-}
+    ],
+  },
+};
