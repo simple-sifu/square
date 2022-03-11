@@ -4,6 +4,7 @@ import "./Square.scss";
 
 class Square extends React.Component {
   constructor(props) {
+    console.log("Square.constructor()");
     super(props);
     this.state = {
       toggle: true,
@@ -12,13 +13,14 @@ class Square extends React.Component {
   }
 
   handleClick() {
-    console.log("handleClick");
+    console.log("Square.handleClick()");
     this.setState({
       toggle: !this.state.toggle,
     });
   }
 
   render() {
+    console.log("Square.render()");
     return (
       <button className="square" onClick={() => this.handleClick()}>
         {this.state.toggle ? "X" : "O"}
