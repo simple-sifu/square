@@ -10,14 +10,14 @@
 
 2. React Terminology
 
-      a.  React Class methods
+      a. React Class methods
 
-             1. constructor - initializing class.
+        1. constructor - initializing class.
 
-             2. render - JSX code that will show up on the page. Looks like Psuedo-HTML.
+        2. render - JSX code that will show up on the page. Looks like Psuedo-HTML.
 
-             3. componentDidMount - when page finishes loading or rendering.
+        3. componentDidMount - when page finishes loading or rendering.
 
-      b. React state variables - changes to state triggers calls to render method. This is why  they call it React.
+      b. state - changes to state triggers calls to render method. This is why  they call it React.
 
       c. Props - passing parameters
