@@ -33,4 +33,3 @@ In React, function components are a simpler way to write components that only co
 3. Stores a game’s history as a game progresses,
 4. Allows players to review a game’s history and see previous versions of a game’s board.
 
-# square
